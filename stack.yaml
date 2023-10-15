@@ -1,0 +1,23 @@
+resolver: nightly-2023-10-09
+
+packages:
+- .
+
+ghc-options:
+  atlas: -Wall -Werror -j
+
+allow-newer: true
+
+# flags:
+#   crypton:
+#     use_target_attributes: false
+#   cryptonite:
+#     use_target_attributes: false
+#   bitvec:
+#     simd: false
+
+extra-deps:
+- commit: 6f634f6c1ecb2b4173dbe4f46d269ee612c68840
+  git: "https://github.com/TomMD/cipher-aes128.git"
+  subdirs:
+  - .
